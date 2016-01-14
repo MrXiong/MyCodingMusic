@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.music.zx.codingmusic.PlayMusicActivity">
+
+    <TextView
+        android:id="@+id/tv_play_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:text="歌名"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <android.support.v4.view.ViewPager
+        android:layout_below="@id/tv_play_name"
+        android:layout_weight="1"
+        android:id="@+id/vp_play_music"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/seekbar_play"
+        android:layout_below="@id/vp_play_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:text="00:00"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/tv_playtime_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="05:00"
+        android:layout_alignParentRight="true"
+        android:id="@+id/tv_playtime_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/iv_pattern"
+        android:src="@mipmap/order_play"
+        android:layout_below="@id/tv_playtime_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/iv_like"
+        android:layout_toRightOf="@+id/iv_pattern"
+        android:layout_marginLeft="30dp"
+        android:src="@mipmap/button_unlike"
+        android:layout_below="@id/tv_playtime_start"
+        android:layout_width="38dp"
+        android:layout_height="38dp" />
+
+    <LinearLayout
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_playtime_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_play_prev"
+        android:src="@mipmap/a4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/iv_play"
+        android:src="@mipmap/a1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/iv_play_next"
+        android:src="@mipmap/a3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MyCodingMusic</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!--播放模式-->
+    <string name="order_play">顺序循环</string>
+    <string name="random_play">随机播放</string>
+    <string name="single_play">单曲循环</string>
+
+</resources>
