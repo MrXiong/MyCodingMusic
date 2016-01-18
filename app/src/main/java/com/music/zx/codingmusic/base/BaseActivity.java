@@ -4,13 +4,11 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.music.zx.codingmusic.service.Contant;
 import com.music.zx.codingmusic.service.PlayService;
 
 /**

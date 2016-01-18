@@ -8,6 +8,7 @@ import java.io.Serializable;
 public class Mp3Info implements Serializable {
     public static final String MP3_INFO = "Mp3Info";
     private long id;
+    private long mp3InfoId;//在收藏音乐的时候用于保存原始id
     //歌名
     private String title;
     //艺术家
@@ -23,6 +24,14 @@ public class Mp3Info implements Serializable {
     private String url;
     //是否是音乐
     private boolean isMusic;
+
+    public long getMp3InfoId() {
+        return mp3InfoId;
+    }
+
+    public void setMp3InfoId(long mp3InfoId) {
+        this.mp3InfoId = mp3InfoId;
+    }
 
     public long getId() {
         return id;

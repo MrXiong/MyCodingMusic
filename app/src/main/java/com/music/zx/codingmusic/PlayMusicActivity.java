@@ -13,8 +13,9 @@ import android.widget.TextView;
 
 import com.music.zx.codingmusic.adapter.PlayMusicPagerAdapter;
 import com.music.zx.codingmusic.base.BaseActivity;
+import com.music.zx.codingmusic.base.IApplication;
 import com.music.zx.codingmusic.entity.Mp3Info;
-import com.music.zx.codingmusic.service.Contant;
+import com.music.zx.codingmusic.base.Contant;
 import com.music.zx.codingmusic.utils.music.MusicUtils;
 import com.music.zx.codingmusic.utils.music.TimeUtils;
 
@@ -52,12 +53,13 @@ public class PlayMusicActivity extends BaseActivity {
     ImageView mIvLike;
     private int position;
     private List<Mp3Info> mMp3Infos;
-
+    private IApplication iApplication;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_music);
         ButterKnife.bind(this);
+        iApplication = (IApplication) getApplication();
         initPlayMusic();
     }
 
@@ -153,7 +155,21 @@ public class PlayMusicActivity extends BaseActivity {
                 mPlayService.next();
                 break;
             case R.id.iv_like:
+             /*   Mp3Info mp3Info = mMp3Infos.get(mPlayService.getThisCurrentPosition());
 
+                try {
+                    Mp3Info mp3InfoLike = iApplication.mDb.selector(Mp3Info.class).where("mp3InfoId", "=", mp3Info.getId()).findFirst();
+                    if(mp3InfoLike == null) {
+                        mIvLike.setImageResource(R.mipmap.button_like);
+                        mp3Info.setMp3InfoId(mp3Info.getId());
+                        iApplication.mDb.save(mp3Info);
+                    } else {
+                        mIvLike.setImageResource(R.mipmap.button_unlike);
+                        iApplication.mDb.deleteById(Mp3Info.class,mp3Info.getId());
+                    }
+                } catch (DbException e) {
+                    e.printStackTrace();
+                }*/
                 break;
             default:
                 break;

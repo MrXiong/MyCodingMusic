@@ -6,11 +6,7 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.music.zx.codingmusic.base.BaseActivity;
-import com.music.zx.codingmusic.service.Contant;
 import com.music.zx.codingmusic.service.PlayService;
-
-import cn.trinea.android.common.util.PreferencesUtils;
 
 public class SplashActivity extends AppCompatActivity {
 

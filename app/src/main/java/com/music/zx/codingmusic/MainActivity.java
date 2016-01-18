@@ -1,20 +1,15 @@
 package com.music.zx.codingmusic;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.graphics.Palette;
 import android.util.TypedValue;
-import android.view.Window;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.music.zx.codingmusic.adapter.MainViewPagerAdapter;
 import com.music.zx.codingmusic.base.BaseActivity;
 import com.music.zx.codingmusic.base.HomeData;
-import com.music.zx.codingmusic.service.Contant;
+import com.music.zx.codingmusic.base.Contant;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
